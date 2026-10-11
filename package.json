@@ -1,0 +1,21 @@
+{
+  "name": "lifelog",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run check && vite build",
+    "start": "node --experimental-strip-types --no-warnings=ExperimentalWarning server/index.ts",
+    "check": "tsc && node --experimental-strip-types --no-warnings=ExperimentalWarning tools/validate.ts",
+    "sim": "node --experimental-strip-types --no-warnings=ExperimentalWarning tools/simulate.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.4"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.133.0"
+  }
+}
